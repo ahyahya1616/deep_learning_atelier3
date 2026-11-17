@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 220" width="100%" height="100%" style="background:#ffffff; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <text x="460" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1e293b">Architecture du Pipeline de Traitement NLP (Langue Arabe)</text>
+  
+  <!-- Step 1 -->
+  <g transform="translate(30, 60)">
+    <rect width="140" height="90" rx="8" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+    <text x="70" y="35" text-anchor="middle" font-size="13" font-weight="bold" fill="#1d4ed8">1. Collecte</text>
+    <text x="70" y="55" text-anchor="middle" font-size="11" fill="#475569">Scraping Web</text>
+    <text x="70" y="70" text-anchor="middle" font-size="10" fill="#64748b">BeautifulSoup</text>
+  </g>
+  <path d="M 175 105 L 205 105" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 2 -->
+  <g transform="translate(210, 60)">
+    <rect width="145" height="90" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+    <text x="72.5" y="35" text-anchor="middle" font-size="13" font-weight="bold" fill="#15803d">2. Nettoyage</text>
+    <text x="72.5" y="55" text-anchor="middle" font-size="11" fill="#475569">Tashkeel &amp; Tatweel</text>
+    <text x="72.5" y="70" text-anchor="middle" font-size="10" fill="#64748b">Normalisation Alif/Yaa</text>
+  </g>
+  <path d="M 360 105 L 390 105" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- Step 3 -->
+  <g transform="translate(395, 60)">
+    <rect width="145" height="90" rx="8" fill="#faf5ff" stroke="#a855f7" stroke-width="2"/>
+    <text x="72.5" y="35" text-anchor="middle" font-size="13" font-weight="bold" fill="#7e22ce">3. Morphologie</text>
+    <text x="72.5" y="55" text-anchor="middle" font-size="11" fill="#475569">Stopwords NLTK</text>
+    <text x="72.5" y="70" text-anchor="middle" font-size="10" fill="#64748b">ISRIStemmer</text>
+  </g>
+  <path d="M 545 105 L 575 105" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- Step 4 -->
+  <g transform="translate(580, 60)">
+    <rect width="145" height="90" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+    <text x="72.5" y="35" text-anchor="middle" font-size="13" font-weight="bold" fill="#b45309">4. Discrétisation</text>
+    <text x="72.5" y="55" text-anchor="middle" font-size="11" fill="#475569">Score 0-10 -> 3 Classes</text>
+    <text x="72.5" y="70" text-anchor="middle" font-size="10" fill="#64748b">Vocab &amp; Padding</text>
+  </g>
+  <path d="M 730 105 L 760 105" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- Step 5 -->
+  <g transform="translate(765, 60)">
+    <rect width="135" height="90" rx="8" fill="#fef2f2" stroke="#ef4444" stroke-width="2"/>
+    <text x="67.5" y="35" text-anchor="middle" font-size="13" font-weight="bold" fill="#b91c1c">5. Modélisation</text>
+    <text x="67.5" y="55" text-anchor="middle" font-size="11" fill="#475569">RNN / BiRNN</text>
+    <text x="67.5" y="70" text-anchor="middle" font-size="10" fill="#64748b">LSTM / GRU</text>
+  </g>
+
+  <text x="460" y="195" text-anchor="middle" font-size="12" fill="#94a3b8">Étudiant : Yahya AHMANE - LSI 3ème Année</text>
+</svg>

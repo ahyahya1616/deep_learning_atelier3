@@ -43,10 +43,16 @@ deep_learning_atelier3/
 ├── data/
 │   ├── arabic_dataset.csv            # Dataset scrapé en langue arabe avec scores (0 à 10)
 │   └── custom_dataset.txt            # Dataset personnalisé pour le fine-tuning de GPT-2
+├── images/
+│   ├── part1_architecture.svg        # Schéma du pipeline NLP
+│   ├── models_comparison.svg         # Graphique comparatif des performances (Accuracy, F1, BLEU)
+│   └── gpt2_training_loss.svg        # Courbe de perte lors du fine-tuning de GPT-2
 ├── part1_nlp_sequence_models.py      # Script complet Partie 1 : Scraping, NLP, RNN, BiRNN, GRU, LSTM, BLEU
 ├── part2_gpt2_text_generation.py     # Script complet Partie 2 : Chargement GPT-2, Fine-Tuning, Génération
 ├── Atelier3_DeepLearning.ipynb       # Notebook Jupyter complet prêt à exécuter (Colab / Kaggle / Local)
+├── generate_result_visuals.py        # Script générateur des diagrammes de résultats
 ├── build_notebook.py                 # Script générateur du notebook
+├── requirements.txt                  # Liste des dépendances Python
 ├── .gitignore                        # Exclusion des fichiers inutiles et Atelier3.pdf
 └── README.md                         # Rapport complet de l'atelier
 ```
@@ -71,6 +77,9 @@ Extrait du jeu de données (`data/arabic_dataset.csv`) :
 ---
 
 ### 2. Pipeline de Prétraitement NLP
+
+![Architecture du Pipeline NLP](images/part1_architecture.svg)
+
 La langue arabe nécessite un nettoyage rigoureux en raison de sa richesse morphologique :
 1. **Suppression du Tashkeel (Diacritiques) :** Élimination des harakat (fatha, damma, kasra, sukun, tanween, shadda) et du tatweel (`ـ`).
 2. **Normalisation :** Unification des différentes formes d'Alif (`أ`, `إ`, `آ` $\rightarrow$ `ا`), du Yaa final (`ى` $\rightarrow$ `ي`) et du Taa Marbouta (`ة` $\rightarrow$ `ه`).
@@ -104,6 +113,8 @@ Hyperparamètres :
 
 ### 4. Évaluation et Métriques (Accuracy, Loss, F1, Score BLEU)
 
+![Comparaison des Modèles Récurrents](images/models_comparison.svg)
+
 Tableau comparatif des performances obtenues sur le jeu de test :
 
 | Modèle | Val Loss | Accuracy | F1-Score (pondéré) | Score BLEU |
@@ -129,6 +140,9 @@ Nous préparons un dataset personnalisé axé sur le Deep Learning et l'IA en ad
 **Procédure de Fine-Tuning :**
 - Gel des blocs inférieurs du Transformer pour préserver les connaissances générales du modèle de base.
 - Entraînement de la tête de prédiction (`lm_head`) et du dernier bloc d'attention sur les données cibles avec l'optimiseur **AdamW** ($\text{lr} = 5 \times 10^{-5}$).
+
+![Courbe de Convergence GPT-2](images/gpt2_training_loss.svg)
+
 - Évolution de la perte d'entraînement :
   - **Époque 1/3 :** Loss = 7.4175
   - **Époque 2/3 :** Loss = 6.7380
@@ -210,4 +224,3 @@ python3 part2_gpt2_text_generation.py
 
 ### 5. Ouvrir le Notebook interactif
 Le notebook [`Atelier3_DeepLearning.ipynb`](Atelier3_DeepLearning.ipynb) peut être exécuté localement avec Jupyter Notebook / JupyterLab, ou importé directement dans **Google Colab** ou **Kaggle**.
-
