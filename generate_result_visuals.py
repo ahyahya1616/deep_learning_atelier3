@@ -219,3 +219,4 @@ print("Generated visual diagrams successfully in images/ directory:")
 print(" - images/models_comparison.svg")
 print(" - images/gpt2_training_loss.svg")
 print(" - images/part1_architecture.svg")
+
