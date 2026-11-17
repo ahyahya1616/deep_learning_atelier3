@@ -1,0 +1,12 @@
+Deep learning is a subset of machine learning based on artificial neural networks with representation learning. <|endoftext|>
+Convolutional neural networks excel at computer vision tasks like image classification, object detection, and segmentation. <|endoftext|>
+Recurrent neural networks and LSTMs process sequential data such as natural language and time series forecasting. <|endoftext|>
+Transformers revolutionized natural language processing by introducing multi-head self-attention mechanisms without recurrence. <|endoftext|>
+Generative pre-trained transformers predict the next token in a sequence given preceding context tokens. <|endoftext|>
+Transfer learning allows deep learning models trained on massive datasets to be adapted to specific downstream tasks with minimal data. <|endoftext|>
+Backpropagation computes the gradient of the loss function with respect to each model weight using the chain rule of calculus. <|endoftext|>
+Optimization algorithms like Adam and AdamW adapt the learning rate during training for faster and more stable convergence. <|endoftext|>
+Large language models understand complex reasoning, programming syntax, and conversational dialogue through scaled self-supervised training. <|endoftext|>
+Reinforcement learning from human feedback aligns neural network outputs with human intentions, safety guidelines, and factual accuracy. <|endoftext|>
+Attention mechanisms compute similarity scores between query, key, and value vectors to dynamically focus on relevant parts of the input. <|endoftext|>
+Artificial intelligence will transform healthcare by accelerating drug discovery and assisting medical diagnosis through computer vision. <|endoftext|>

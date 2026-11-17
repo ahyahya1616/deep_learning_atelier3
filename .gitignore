@@ -1,0 +1,9 @@
+# Lab files to ignore
+Atelier3.pdf
+.venv/
+__pycache__/
+*.pyc
+*.pt
+*.bin
+*.pth
+.ipynb_checkpoints/
