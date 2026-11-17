@@ -210,3 +210,4 @@ python3 part2_gpt2_text_generation.py
 
 ### 5. Ouvrir le Notebook interactif
 Le notebook [`Atelier3_DeepLearning.ipynb`](Atelier3_DeepLearning.ipynb) peut être exécuté localement avec Jupyter Notebook / JupyterLab, ou importé directement dans **Google Colab** ou **Kaggle**.
+

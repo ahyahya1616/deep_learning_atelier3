@@ -444,3 +444,4 @@ with open("Atelier3_DeepLearning.ipynb", "w", encoding="utf-8") as f:
     nbf.write(nb, f)
 
 print("Notebook Atelier3_DeepLearning.ipynb created successfully!")
+
